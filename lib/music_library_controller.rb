@@ -50,8 +50,7 @@ class MusicLibraryController
    artist_songs.each {|song|puts "#{artist_songs.index(song) + 1}. #{song.name} - #{song.genre.name}"} unless artist_songs == nil
  end
 
- def name_extractor(filename)
-   #Returns an array, first value is artist, second is song, third is genre
+ def name_extractor(filename)   
    file_bits = filename.gsub(/(\.mp3)/,'')
    file_bits = file_bits.split(" - ")
  end
