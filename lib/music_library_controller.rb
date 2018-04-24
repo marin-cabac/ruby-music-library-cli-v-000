@@ -6,8 +6,8 @@ class MusicLibraryController
  end
 
  def library(klass = Song)
-   sorted_library = klass.all.collect{|object|object if object.class == klass }
-   sorted_library = sorted_library.delete_if {|object|object==nil}
+   sorted_library = klass.all.collect{|obj|obj if obj.class == klass }
+   sorted_library = sorted_library.delete_if {|obj|obj==nil}
    sorted_library.uniq
  end
 
