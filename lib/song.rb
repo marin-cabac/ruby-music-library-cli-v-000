@@ -49,14 +49,14 @@ class Song
   def self.find_by_name(name)
 		@@all.each do |song|
 			if song.name == name
-				return song #must use return 
+				return song #must use return
 			end
 		end
 	end
 
   def self.find_or_create_by_name(name)
  song=self.find_by_name(name)
-    if @@all.include?(song)
+    if @@all.include? song
        song
     else
    self.create(name)
