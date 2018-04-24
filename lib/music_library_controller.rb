@@ -27,7 +27,7 @@ class MusicLibraryController
 
  def list_artists
    sorted_library = self.library(Artist).sort_by {|obj|obj.name}
-   artists = sorted_library.collect {|obj|"#{obj.name}"}.uniq
+   artists = sorted_library.map {|obj|"#{obj.name}"}.uniq
    artists.each {|artist| puts "#{artists.index(artist) + 1}. #{artist}"}
  end
 
