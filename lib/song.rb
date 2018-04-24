@@ -1,4 +1,4 @@
-require 'pry'
+ 
 class Song
 #  extend Concerns::Findable  #not required here
   attr_accessor :name, :artist, :genre
